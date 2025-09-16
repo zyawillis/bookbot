@@ -39,12 +39,7 @@ def get_book_text(file_path):
         file_contents = f.read()
     return file_contents
 
-# Return the number of words in a string
-
-def num_words(prnt_file_contents):
-    split_words = prnt_file_contents.split()
-    word_len = len(split_words)
-    announce = f"{word_len} words found in the document"
-    return announce
+# Import num_words function from "stats.py"
+from stats import num_words
 
 main()
