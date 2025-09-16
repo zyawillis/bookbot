@@ -1,3 +1,15 @@
+################################
+#   Developed by Zya Willis    #
+#         @ BOOKBOT @          #
+################################
+
+"""
+
+Bookbot is designed to count the number of words in a ".txt" file - project was given by boot.dev. 
+I'd like to expand on this by creating an "average read time" statistic based on how long the average person takes to read X ammount of words
+
+"""
+
 def main():
     
 # Define variables
@@ -30,8 +42,9 @@ def get_book_text(file_path):
 # Return the number of words in a string
 
 def num_words(prnt_file_contents):
-    """ May need to take out the f statement and tac on later. Need to count the words before output to console """
-    split_words = f"{prnt_file_contents.split(" ")} words found in the document"
-    return split_words
+    split_words = prnt_file_contents.split()
+    word_len = len(split_words)
+    announce = f"{word_len} words found in the document"
+    return announce
 
 main()
